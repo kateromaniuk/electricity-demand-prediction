@@ -40,6 +40,8 @@ Electricity demand forecasting plays a critical role for:
 
 2. **Data Cleaning & Transformation**: Filled missing values using yearly growth interpolation, then logarithmized most variables (e.g., GDP, population) to reduce skew. Also, new economic features were engineered: household consumption expenditure, industrial value added, and other variables.
 
+<img src="https://github.com/kateromaniuk/electricity-demand-prediction/blob/main/predictors.png?raw=true" height="600" alt="Predictors">
+
 3. **Model Building:** Generated all possible combinations of predictors (1,023 regression models) and then selected the five best-suited models applying the following criteria: 
   - Adjusted R² ≥ 0.5
   - VIF < 5 (low multicollinearity)
@@ -58,9 +60,9 @@ Electricity demand forecasting plays a critical role for:
 - GDP growth rate
 
 **Regression equation:**
-*Electricity Demand = 4,120,457.2 − 214,808.34 × ln(population)
-                     − 7,309.04 × ln(industry)
-                     + 262.03 × GDP growth rate*
+*Electricity Demand = 4,120,457.2 − 214,808.34 × ln(population) − 7,309.04 × ln(industry) + 262.03 × GDP growth rate*
+
+<img src="https://github.com/kateromaniuk/electricity-demand-prediction/blob/main/france_forecast.png?raw=true" height="400" alt="France Forecast">
 
 **Model results:**
 - Predicts a 7.3% decline in average hourly demand by 2028
@@ -79,13 +81,12 @@ interpretable forecast, it likely underestimates the impact of emergent drivers 
 - GDP deflator
 
 **Regression equation:**
-*Electricity Demand = −725,600.8
-                     + 14,600.99 × ln(manufacturing)
-                     + 22,434.15 × ln(rural population)
-                     − 329.01 × GDP deflator*
+*Electricity Demand = −725,600.8 + 14,600.99 × ln(manufacturing) + 22,434.15 × ln(rural population) − 329.01 × GDP deflator*
+
+<img src="https://github.com/kateromaniuk/electricity-demand-prediction/blob/main/italy_forecast.png?raw=true" height="400" alt="Italy Forecast">
 
 **Model results:**
-- Predicts a slight increase in electricity demand (≈ +0.9%) by 2028
+- Predicts a slight increase in electricity demand by 2028
 - The upward trend aligns with official forecasts from TERNA (Italy’s national grid operator)
 
 
